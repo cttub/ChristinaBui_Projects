@@ -1,0 +1,25 @@
+Christina Bui
+Summa
+Initialize lowest possible to low variable
+Initialize highest possible to high variable
+Initialize boolean to guess variable
+Initialize User Input to userInput
+Initialize variable to initialGuess
+Initialize a variable in which to store number of guesses to attempts
+Initialize Scanner object
+Promjpt User to chose number
+Set variable for initialGuess And store it by ty taking the high variable and dividing it by two
+Increment attempts in the variable storing number by
+Present guess to User with initialGuess
+Present prompt to user
+User Scanner to grab next int
+If User type 1 change boolean variable to true and skip loop and prompts user with their number
+If user types 3 solve for new low variable by adding guess by one
+Indicares flaw in User Input
+Subtract Highest Variable by low variable
+Take Difference of that and Divide it by 2
+Take Highest variable and subtact from the quotient
+Print out attempts
+
+
+
