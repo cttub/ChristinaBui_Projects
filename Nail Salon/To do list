@@ -1,0 +1,36 @@
+To do list:
+++ equals done
+
+
+NailSalonRunner:
+	Category:
+		Services:
+			Make Services ++
+			Show Services ++
+			Delete Services
+
+		Customers:
+			Add Customer 
+			Customer Checkout (Calculates Customer Total/Prints it out)
+			View Customer List (Shows Customer List in order/What Service they got)
+
+		Technicians:
+			Add Technician
+			Remove Technician
+			View Technicians List
+
+
+
+CashRegister:
+
+CustomerList: (Array of Customer)
+	Add Customer
+	Remove Customer
+	View List
+
+TechnicianList: (Array of Technician)
+	Add Technician
+	Remove Technician
+	View Technician List
+	
+

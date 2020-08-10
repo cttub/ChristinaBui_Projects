@@ -5,11 +5,13 @@ public class Service{
 	
 		private int cost;
 		private String name;
+		private int time;
 
 		//contructor of Item
-		public Service(int cost, String name){
+		public Service(int cost, String name, int time){
 				this.cost = cost;
 				this.name = name;
+				this.time = time;
 		}
 		//gets the cost of the Service
 		public int getCost(){
@@ -19,6 +21,10 @@ public class Service{
 		public String getName(){
 			return this.name;
 		}
+		//gets the time of service
+		public int getTime(){
+			return this.time;
+		}
 		//sets the cost of service
 		public void setCost(int cost){
 			this.cost = cost;
@@ -26,6 +32,10 @@ public class Service{
 		//sets the name of service
 		public void setName(String name){
 			this.name = name;
+		}
+		//sets the time of service
+		public void setTime(int time){
+			this.time = time;
 		}
 
 } //end of class
