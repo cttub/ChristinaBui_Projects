@@ -29,14 +29,16 @@ static void main(){
 	System.out.println("What would you want to do?");
 
 	//Change this to add categories regarding task and options
-	System.out.println("1) Make Service\n2) Show Services 3)Quit");
+	System.out.println("1) Make Service\n2) Show Services \n3) Quit");
 	int userInput = input.nextInt();
 
 	if(userInput == 1){
 		makeService();
+		main();
 	}
 	else if(userInput == 2){
 		register.printService();
+		main();
 
 	}
 	else if(userInput == 3){
@@ -44,9 +46,10 @@ static void main(){
 	}
 	else{
 		System.out.println("Not an option");
+		main();
 	}
 
-	main();
+	
 
 }//end of main()
 
@@ -64,5 +67,6 @@ static void makeService(){
 
 
 }//end of makeService()
+
 
 }//end of class
