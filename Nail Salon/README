@@ -1,0 +1,20 @@
+README
+
+To run:
+
+Open Terminal
+Locate Files by cd into the path
+javac *.java
+java NailSalonRunner
+
+
+About:
+
+My past job, I use to work as a Receptionist at Marvelous Nails. It was hard to organize customer service along with checking people out with their final purchases. This is a personal project to better implement: 
+			Customer Check-In/Check-Out
+			Customer Wait Time
+			Purchases
+			Technician Order
+			Technician Wait-Time
+
+I do not plan on using this project outside of just a personal project to build my Java skills. But if there is any opportunity to grow this project, I would be open to any ideas.
