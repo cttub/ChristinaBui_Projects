@@ -6,6 +6,7 @@ public class Service{
 		private int cost;
 		private String name;
 		private int time;
+		private int number;
 
 		//contructor of Item
 		public Service(int cost, String name, int time){
@@ -25,6 +26,10 @@ public class Service{
 		public int getTime(){
 			return this.time;
 		}
+		//get number
+		public int getNumber(){
+			return this.number;
+		}
 		//sets the cost of service
 		public void setCost(int cost){
 			this.cost = cost;
@@ -36,6 +41,10 @@ public class Service{
 		//sets the time of service
 		public void setTime(int time){
 			this.time = time;
+		}
+		//sets number
+		public void setNumber(int number){
+			this.number = number;
 		}
 
 } //end of class

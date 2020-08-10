@@ -6,7 +6,7 @@ public class Customer{
 		private String name;
 		private List<Service> customerServices = new ArrayList<Service>();
 		private int total;
-
+		private int number; 
 		//customer
 		public Customer(String name){
 			this.name = name;
@@ -35,5 +35,13 @@ public class Customer{
 					this.total = this.total + customerServices.get(i).getCost();
 			}
 			return this.total;
+		}
+
+		//set&get for number
+		public int getNumber(){
+			return this.number;
+		}
+		public void setNumber(int number){
+			this.number = number;
 		}
 }//end of class

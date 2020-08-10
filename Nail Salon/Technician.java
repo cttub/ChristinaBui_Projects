@@ -6,7 +6,7 @@ public class Technician{
 			private Service service;
 			private int tips;
 			private boolean avaliable;
-
+			private int number;
 
 			//contructor
 			public Technician(String name,boolean avaliable){
@@ -31,6 +31,9 @@ public class Technician{
 	public boolean getStatus(){
 		return this.avaliable;
 	}
+	public int getNumber(){
+		return this.number;
+	}
 
 	//setters
 	public void setName(String name){
@@ -48,6 +51,9 @@ public class Technician{
 	public void setStatus(boolean avaliable){
 		this.avaliable = avaliable;
 
+	}
+	public void setNumber(int number){
+		this.number = number;
 	}
 
 
