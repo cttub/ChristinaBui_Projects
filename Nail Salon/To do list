@@ -7,7 +7,7 @@ NailSalonRunner:
 		Services:
 			Make Services ++
 			Show Services ++
-			Delete Services
+			Delete Services++
 
 		Customers:
 			Add Customer 
@@ -15,9 +15,9 @@ NailSalonRunner:
 			View Customer List (Shows Customer List in order/What Service they got)
 
 		Technicians:
-			Add Technician
-			Remove Technician
-			View Technicians List
+			Add Technician++
+			Remove Technician++
+			View Technicians List++
 
 
 
@@ -29,8 +29,8 @@ CustomerList: (Array of Customer)
 	View List
 
 TechnicianList: (Array of Technician)
-	Add Technician
-	Remove Technician
-	View Technician List
+	Add Technician++
+	Remove Technician++
+	View Technician List++
 	
 

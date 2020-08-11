@@ -12,10 +12,12 @@ public class CashRegister{
 		//array for List of services
 		private List<Service> listOfServices = new ArrayList<Service>();
 		private List<Technician> listOfTechnicians = new ArrayList<Technician>();
+		private List<Customer> listOfCustomers = new ArrayList<Customer>();
 		private Service service;
 		private int serviceNumber = 0;
 		private int techNumber = 0;
 		private int customerNumber = 0;
+		private int nextTech = 0;
 		
 
 
@@ -39,7 +41,8 @@ public class CashRegister{
 		//remove services
 		public void removeService(int i){
 
-				
+				this.serviceNumber--;
+
 				listOfServices.remove(i-1);
 
 				for(int j = 0; j < listOfServices.size(); j++){
@@ -47,6 +50,11 @@ public class CashRegister{
 						listOfServices.get(j).setNumber(j+1);
 
 				}
+		}
+
+		//gets the service at a certain index
+		public Service getService(int i){
+				return listOfServices.get(i-1);
 		}
 
 
@@ -68,6 +76,8 @@ public class CashRegister{
 
 		public void removeTech(int i){
 
+				this.techNumber--;
+
 				listOfTechnicians.remove(i-1);
 
 				for(int j = 0; j < listOfTechnicians.size(); j++){
@@ -76,6 +86,75 @@ public class CashRegister{
 
 				}
 		}
+
+
+		//customer methods
+
+		//add customer to list
+		public void addCustomer(Customer cust){
+
+			this.customerNumber++;
+			listOfCustomers.add(cust);
+			cust.setNumber(customerNumber);
+
+
+		}
+
+		//print Customer list
+		public void printCustomerList(){
+
+			 for(int i =0; i < listOfCustomers.size(); i++){
+
+			 		System.out.println(this.listOfCustomers.get(i).getNumber()+") "+this.listOfCustomers.get(i).getName()+"......Seated: "+this.listOfCustomers.get(i).getSeated());
+			 }
+		}
+
+		//remove customer
+		public void removeCustomer(int i){
+				this.customerNumber--;
+
+				listOfCustomers.remove(i-1);
+
+				for(int j = 0; j < listOfCustomers.size(); j++){
+
+						listOfCustomers.get(j).setNumber(j+1);
+
+				}
+		}
+
+
+		//checks who the next customer that is not seated; seated = false; Changed the status to true and also changed the status of the Tech that is avaliable = true
+		public void nextCustomer(){
+
+				int i = 0;
+				
+
+				//go through the list until find someone who is not seated; seated = false
+				while(listOfCustomers.get(i).getSeated() != false){
+
+						i++;
+				}
+
+				listOfCustomers.get(i).setSeated(true);
+
+				if (this.nextTech > listOfTechnicians.size()) {
+
+						this.nextTech = 0;					
+				}
+
+				listOfTechnicians.get(this.nextTech).setStatus(false);
+				listOfTechnicians.get(this.nextTech).setTime(listOfCustomers.get(i).getTime());
+				this.nextTech++;
+
+		}
+
+
+
+
+
+
+
+
 
 
 

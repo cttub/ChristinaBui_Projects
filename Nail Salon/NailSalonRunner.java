@@ -14,6 +14,7 @@ public class NailSalonRunner{
 		static CashRegister register = new CashRegister();
 
 
+
 		public static void main(String[] args){
 		
 			main();
@@ -34,7 +35,7 @@ static void main(){
 		serviceOptions();
 	}
 	else if(userInput == 2){
-
+		customer();
 	}
 	else if(userInput == 3){
 		technician();
@@ -48,6 +49,8 @@ static void main(){
 	
 
 }//end of main()
+
+//Service Options
 static void serviceOptions(){
 	Scanner input = new Scanner(System.in);
 
@@ -166,12 +169,101 @@ static  void removeTech(){
 		register.removeTech(userInput);
 }
 
+//Customer Options
+static void customer(){
+		Scanner input = new Scanner(System.in);
+
+		System.out.println("Customer");
+		System.out.println("1) Check-In Customer\n2) Check-Out Customer\n3) Take Customer\n4) Remove Service\n5) Show Wait-List\n6) Previous\n7) Quit");
+		int userInput = input.nextInt();
+
+		if(userInput == 1){
+			checkInCust();
+		}
+		else if(userInput == 2){
+
+		}
+		else if(userInput == 3){
+			takeCustomer();
 
 
+		}
+		else if(userInput ==4){
+
+		}
+		else if(userInput == 5){
+			register.printCustomerList();
+		}
+		else if(userInput == 6){
+			main();
+		}
+		else if(userInput == 7){
+			System.exit(0);
+		}
+		else{
+			System.out.println("Not an Option");
+		}
+
+		customer();
+
+}
 
 
+//Check In Customer
+
+static void checkInCust(){
+
+		Scanner input = new Scanner(System.in);
+		System.out.println("Name");
+		String userInput = input.nextLine();
+
+		Customer cust = new Customer(userInput, false);
+		register.addCustomer(cust);
+
+		System.out.println("How many Services");
+		int userInput2 = input.nextInt();
+
+		for(int i = 0; i < userInput2; i++){
+
+		System.out.println("Service Selection");
+
+		register.printService();
+
+		int userInput3 = input.nextInt();
+
+		cust.addCustomerServices(register.getService(userInput3));
+	}
+}
+
+//this determines what customer goes next
+
+static void takeCustomer(){
+		Scanner input = new Scanner(System.in);
+
+		System.out.println("Which customer is next?");
+		register.printCustomerList();
+		System.out.println("1) Next in Line 2) Pick Customer");
+
+		int userInput = input.nextInt();
+
+		if(userInput ==  1){
+			register.nextCustomer();
+
+		}
+		else if(userInput == 2){
+			register.printCustomerList();
+
+			userInput = input.nextInt();
+
+			//IMPLEMENT THIS LATER
+		}
+		else{
+			System.out.println("Not an Option");
+			takeCustomer();
+		}
 
 
+}
 
 
 
