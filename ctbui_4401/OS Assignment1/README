@@ -1,0 +1,14 @@
+Run these commands to run. Make sure you are in the same directory as the files.
+
+1) g++ -o partA partA.cpp
+2) g++ o partB partB.cpp
+
+3) ./partA
+4) ./partB
+
+4.5) IF n > 4 then do this:
+	*In the graph.gv file, after line 1 add:
+		page = "8.5,11"; 
+
+
+5) dot -Tps graph.gv -o graph.ps
