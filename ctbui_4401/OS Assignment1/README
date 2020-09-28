@@ -1,3 +1,5 @@
+Assignment that works with fork() and makes it into a graph
+
 Run these commands to run. Make sure you are in the same directory as the files.
 
 1) g++ -o partA partA.cpp
