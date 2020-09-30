@@ -1,0 +1,57 @@
+Assignment that works with Single/MultiThreading. Finding the word frequencies of a book.
+
+				          Part 1
+******************************************************************************************
+Part A:
+
+First print out A Tale of Two Cities onto a text file.
+		
+		curl  https://www.gutenberg.org/files/98/98-0.txt > guten.txt
+		or
+		$wget https://www.gutenberg.org/files/98/98-0.txt --no-check-certificate > guten.txt
+		or
+		$wget https://www.gutenberg.org/files/98/98-0.txt > guten.txt
+
+Compile & then Run PartA Program
+		
+		javac PartA.java
+		java PartA
+
+Input your text file when running the Program
+	
+		guten.txt
+******************************************************************************************
+Part B:
+
+Compile then Run PartB Program
+	
+		javac PartB.java
+		java PartB
+
+******************************************************************************************
+					
+
+					Part 2
+******************************************************************************************
+Part A:
+
+	If you want this code to work on your computer, you would have to change some things. 
+	Change any FileReader fr = new FileReader("/Users/christinabui/Desktop/ctbui_Assignment2/Part2/bookGuten/guten"+a+".txt"); to the directory that the ctbui_Assignment2 file is located at. I recommend putting it on your desktop and just changing "christinabui" to your home directory name.(Applies on line 47, 186, 218)
+	
+	
+	You would also need to run the book.sh file (in a file called bookGuten) to download all the book files. (This is mainly for the Professor, these files should be included in gitHub)
+		bash book.sh
+
+	Compile & Run
+		javac PartA.java
+		java PartA
+******************************************************************************************
+Part B:
+
+	The same rules apply that we did with Part A (Changing FileReader fr = new Reader(...) pathway. This would only apply on line 54.
+
+	If you have not downloaded the book files in a folder "bookGuten" please do so as stated in PartA.
+
+	Compile & Run
+		javac PartB.java
+		java PartB
