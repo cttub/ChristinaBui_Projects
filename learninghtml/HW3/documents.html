@@ -1,0 +1,115 @@
+<head>
+		
+	<link rel="icon" href="assets/favicon.png">
+	<title>Christina Bui</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="styles/bootstrap.min.css">
+	<link rel="stylesheet" href="styles/bootstrap-icons.css">
+
+	<style>
+		body{
+			background-color: #6f60c0;
+		}
+		.navi {
+		  overflow: hidden;
+		  background-color: #677be5;
+		  top: 0%;
+		  position: sticky;
+		}
+
+		.navi a {
+		  float: left;
+		  color: #fff;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		  font-size: 17px;
+		}
+
+		.navi a:hover {
+		  background-color: #ddd;
+		  color: black;
+		}
+
+		.navi a.active {
+		  background-color: #4CAF50;
+		  color: white;
+		}
+	</style>
+	
+</head>
+<body class = "text-light">
+	
+	<!-- Navigation -->
+	<div>
+		<div class ="navi">
+			<button class = "btn btn-outline-light" type="button" onclick="document.location = 'index.html'">
+				Home <i class = "bi bi-house"></i>
+			</button>
+			<button class = "btn btn-outline-light" type="button" onclick="document.location = 'about.html'">
+				About <i class = "bi bi-person"></i>
+			</button>
+			<button class = "btn btn-outline-light" type="button" onclick="document.location = 'projects.html'">
+				Projects  <i class = "bi bi-code-slash"></i>
+			</button>
+			<button class = "btn btn-outline-dark" type="button" onclick="document.location = 'documents.html'">
+				Documents  <i class = "bi bi-paperclip"></i>
+			</button> 
+			<button class = "btn btn-outline-light" type="button" onclick="document.location = 'contact.html'">
+				Contact  <i class = "bi bi-envelope"></i>
+			</button> 
+		</div>
+
+	<!-- Title of Page -->
+		<div class= "container mt-4">
+			<h1>
+				Documents  <i class = "bi bi-paperclip"></i>
+			</h1>
+			<hr>
+		</div>
+		<br>
+	<!--Carousel -->
+	<div id = "blog-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+		<!--Carousel Menu-->
+		<ol class="carousel-indicators">
+			<li data-bs-target="#blog-carousel" data-bs-slide-to="0" class="active"></li>
+			<li data-bs-target="#blog-carousel" data-bs-slide-to="1"></li>
+		</ol>
+		
+		<div class = "carousel inner text-center">
+			<!-- Document 1 -->
+			<div id="slide-1" class="carousel-item active">
+				<img class="img-fluid" src="assets/resume.png" width="600" height="30">
+			<div class= "carousel-caption">
+				<h5> Resume 2021</h5>
+				<p>Christina Bui's Resume as of Janurary 2021</p>
+				<button onclick="document.location = 'articles/resume.html'"> Read More</button>
+			</div>
+		</div>
+		<!--Document 2-->
+		<div id="slide-2" class = "carousel-item">
+			<img class="img-fluid" src="assets/course.png" width="600" height="30" >
+			<div class="carousel-caption">
+				<h5>Unofficial Transcript</h5>
+				<p>Unofficial Transcript from August 2018-December 2020</p>
+				<button onclick="document.location='articles/course.html'">Read More</button>
+			</div>
+		</div>
+	</div>
+
+		<!--Carousel Controls-->
+		<a class="carousel-control-prev" href="#blog-carousel" role="button" data-bs-slide="prev">
+		<i class="carousel-control-prev-icon"></i>
+		</a>
+		<a class="carousel-control-next" href="#blog-carousel" role="button" data-bs-slide="next">
+		<i class="carousel-control-next-icon"></i>
+		</a>
+
+
+	</div>
+
+	<script src="scripts/bootstrap.bundle.min.js"></script>
+</body>
