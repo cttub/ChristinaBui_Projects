@@ -6,6 +6,7 @@ import java.util.*;
 public class ReadFile {
 
     static ArrayList<String> text = new ArrayList<String>(); //ArrayList Object
+    static ArrayList<String> whitelist = new ArrayList<String>(); //ArrayList Object Whitelist
 
   public static void main(String[] args) {
 
@@ -33,7 +34,6 @@ public class ReadFile {
     removeWhiteSpace();
 
     addressesOnly();
-
     printArray();
 
   }//end of main
@@ -55,9 +55,9 @@ static void removeWhiteSpace(){
 //prints array 
 static void printArray(){
 
-     for(int i= 0; i < text.size(); i++){
+     for(int i= 0; i < whitelist.size(); i++){
       
-        System.out.println(i+": "+text.get(i));
+        System.out.println(i+": "+whitelist.get(i));
 
     }//end of For
    
@@ -66,14 +66,18 @@ static void printArray(){
 //makes the array to show address only
 static void addressesOnly(){
 
-     for(int i= 0; i < text.size(); i++){
-        
-        if(text.get(i).charAt(0) != '0' && text.get(i).charAt(1) != 'x'){
-          text.remove(i);
-        }
+
+        for(int i= 0; i < text.size(); i++){
+
+            if(text.get(i).charAt(0) == '0' && text.get(i).charAt(1) == 'x'){
+                 whitelist.add(text.get(i)); 
+            }   
+           
+    }
+  
        
 
-    }//end of For
+  
 
 }
 
